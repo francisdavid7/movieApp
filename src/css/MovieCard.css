@@ -1,4 +1,4 @@
-.movie-card {
+/* .movie-card {
   position: relative;
   border-radius: 8px;
   overflow: hidden;
@@ -123,9 +123,9 @@
   }
 } */
 
-/* ...existing code...
+/* ...existing code...*/
 
-/*
+
 :root{
   --card-bg-1: rgba(255,255,255,0.02);
   --card-bg-2: rgba(0,0,0,0.45);
@@ -137,7 +137,6 @@
   --glass-strong: 12px;
 }
 
-/* Card shell */
 .movie-card{
   position: relative;
   display: flex;
@@ -153,13 +152,11 @@
   transition: transform 260ms cubic-bezier(.2,.9,.2,1), box-shadow 260ms;
 }
 
-/* Hover lift */
 .movie-card:hover{
   transform: translateY(-10px);
   box-shadow: 0 30px 70px rgba(0,0,0,0.65);
 }
 
-/* Poster area */
 .movie-poster{
   position: relative;
   width: 100%;
@@ -168,7 +165,6 @@
   overflow: hidden;
 }
 
-/* Poster image */
 .movie-poster img{
   width: 100%;
   height: 100%;
@@ -178,13 +174,11 @@
   transform-origin: center center;
 }
 
-/* Slight zoom and desaturate on hover for cinematic feel */
 .movie-card:hover .movie-poster img{
   transform: scale(1.04);
   filter: saturate(1.02) contrast(1.03);
 }
 
-/* Overlay that fades in with controls/info */
 .movie-overlay{
   position: absolute;
   inset: 0;
@@ -203,7 +197,6 @@
   pointer-events: auto;
 }
 
-/* Favorite button: rounded glass chip */
 .favorite-btn{
   position: absolute;
   top: 12px;
@@ -222,7 +215,6 @@
   backdrop-filter: blur(4px);
 }
 
-/* Active and hover states */
 .favorite-btn:hover{
   transform: translateY(-3px);
   background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
@@ -238,7 +230,6 @@
   transform: translate(-50%,-50%) scale(1);
 }
 
-/* Info area */
 .movie-info{
   padding: 0.9rem;
   display: flex;
@@ -247,7 +238,7 @@
   background: linear-gradient(180deg, rgba(0,0,0,0.02), rgba(0,0,0,0.06));
 }
 
-/* Title styling with clamp and ellipsis */
+
 .movie-info h3{
   margin: 0;
   color: #fff;
@@ -259,7 +250,7 @@
   text-overflow: ellipsis;
 }
 
-/* Meta / description */
+
 .movie-info p{
   margin: 0;
   color: var(--muted);
@@ -271,7 +262,7 @@
   text-overflow: ellipsis;
 }
 
-/* Rating badge on poster bottom-left */
+
 .rating-badge{
   position: absolute;
   left: 12px;
@@ -286,7 +277,7 @@
   backdrop-filter: blur(3px);
 }
 
-/* Chips and actions row */
+
 .card-actions{
   display: flex;
   gap: 0.5rem;
@@ -310,7 +301,7 @@
   border: 1px solid rgba(255,255,255,0.02);
 }
 
-/* Rating select & user rating */
+
 .rating-select{
   background: rgba(255,255,255,0.02);
   color: var(--muted);
@@ -334,7 +325,7 @@
   margin-left: auto;
 }
 
-/* Skeleton state for loading */
+
 .movie-card.skeleton{
   position: relative;
   overflow: hidden;
@@ -350,7 +341,7 @@
   100%{ background-position: -100% 0; }
 }
 
-/* Responsive tweaks */
+
 @media (max-width: 900px){
   .movie-poster{ aspect-ratio: 3/4; }
   .favorite-btn{ width: 40px; height: 40px; top: 10px; right: 10px; }

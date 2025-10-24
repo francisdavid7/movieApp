@@ -61,3 +61,18 @@
   width: 100%;
   box-sizing: border-box;
 }
+
+.loading {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #666;
+  font-weight: bold;
+}
+
+.error {
+  text-align: center;
+  color: red;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-top: 15rem;
+}
