@@ -1,5 +1,6 @@
 import "../css/MovieCard.css";
 import { useMovieContext } from "../contexts/MovieContext";
+import noMoviePoster from "../assets/no-movie.png";
 
 const MovieCard = ({ movie }) => {
   const { isFavorite, addToFavorites, removeFromFavorites } = useMovieContext();
@@ -13,7 +14,13 @@ const MovieCard = ({ movie }) => {
   return (
     <div className="movie-card">
       <div className="movie-poster">
-        <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} />
+        <img
+          src={
+            movie.poster_path
+              ? `https://image.tmdb.org/t/p/w500${movie.poster_path}`
+              : noMoviePoster
+          }
+        />
         <div className="movie-overlay">
           <button
             className={`favorite-btn ${favorite ? "active" : ""}`}
